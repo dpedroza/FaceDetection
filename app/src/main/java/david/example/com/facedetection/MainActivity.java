@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
         myImageView = (ImageView) findViewById(R.id.imgview);
 
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inMutable=true;
+        bm = BitmapFactory.decodeResource(
+                getApplicationContext().getResources(),
+                R.drawable.test2,
+                options);
+
         Button btn2 = (Button) findViewById(R.id.button2);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
